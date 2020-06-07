@@ -7,6 +7,6 @@ window.addEventListener("load", function () {
   var container = document.querySelector(".container");
   // preloader.classList.add("loaded");
   container.classList.add("animated", "zoomInDown");
-  document.body.classList.remove("inactive");
+  // document.body.classList.remove("inactive");
   // }, 500);
 });
