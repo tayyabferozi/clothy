@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Online Clothing | Clothy</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/vector/t-shirt-black.svg"
+      type="image/x-icon"
+    />
+
+    <!-- PRELOADER TERMINATOR -->
+    <script src="../assets/js/app.js" defer></script>
+  </head>
+  <body class="inactive">
+    <div class="container">
+      <div class="dark-overlay"></div>
+      <div class="dark-overlay-modal"></div>
+
+      <div class="items-modal">
+        <div class="title">
+          <h3>
+            My Cart
+            <span class="close">&times;</span>
+          </h3>
+        </div>
+        <div class="body">
+          <table>
+            <thead>
+              <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+          </table>
+          <div class="btn-container">
+            <button class="btn-red-outline">Clear My Cart</button>
+            <button
+              class="btn-green-outline"
+              onclick="window.location='checkout.html'"
+            >
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-modal">
+        <div class="title">
+          <h3>
+            Add To Cart
+            <span class="close">&times;</span>
+          </h3>
+        </div>
+        <div class="body">
+          <label
+            >Item Name:
+            <span class="name-holder"></span>
+          </label>
+          <label for="quantity"
+            >Quantity:
+            <input
+              type="number"
+              name="quantity"
+              min="1"
+              value="1"
+              id="quantity"
+              autofocus
+            />
+          </label>
+          <label>Price: Rs. <span class="price-holder"></span>/-</label>
+          <label
+            >Amount: Rs. <span class="amount-holder"></span>/- (for this item
+            only)</label
+          >
+          <button class="btn-green-outline">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="shop-background-text">
+        Shop
+      </div>
+
+      <!-- <section class="preloader">
+        <div class="loader"></div>
+        <h3>Wait While We Redirect You To The Shop</h3>
+      </section> -->
+
+      <nav class="shop-nav">
+        <a href="../index.html">
+          <img
+            src="../assets/vector/t-shirt-black.svg"
+            class="logo"
+            alt="logo"
+          />
+        </a>
+        <div class="show-sm">
+          <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="categories hide-sm">
+          <h3 class="men-tab"><span>Men</span></h3>
+          <h3 class="women-tab"><span>Women</span></h3>
+          <h3 class="kids-tab"><span>Kids</span></h3>
+        </div>
+        <div class="my-cart hide-sm">
+          <div class="cart-icon">
+            <span class="cart-count"></span>
+            <img src="../assets/vector/shopping-cart.svg" alt="shopping-cart" />
+          </div>
+        </div>
+        <div class="side-nav">
+          <div class="my-cart">
+            <div class="cart-icon">
+              <span class="cart-count"></span>
+              <img
+                src="../assets/vector/shopping-cart.svg"
+                alt="shopping-cart"
+              />
+            </div>
+            <h4>My Cart</h4>
+          </div>
+          <div class="categories">
+            <h3 class="men-tab"><span>Men</span></h3>
+            <h3 class="women-tab"><span>Women</span></h3>
+            <h3 class="kids-tab"><span>Kids</span></h3>
+          </div>
+        </div>
+      </nav>
+
+      <main class="shop">
+        <div class="card-container">
+          <div class="card men">
+            <img src="../assets/img/stock/men/men-1.jpg" alt="men-shirt" />
+            <h4><span class="name">Sloppy Joes Shirt</span></h4>
+            <h4>Rs. <span class="price"> 999</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card men">
+            <img src="../assets/img/stock/men/men-2.jpg" alt="men-suit" />
+            <h4><span class="name">Men Suit</span></h4>
+            <h4>Rs. <span class="price"> 1499</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card men">
+            <img src="../assets/img/stock/men/men-3.jpg" alt="men-poly-shirt" />
+            <h4><span class="name">Dry Poly Shirt</span></h4>
+            <h4>Rs. <span class="price"> 799</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card men">
+            <img
+              src="../assets/img/stock/men/men-4.jpg"
+              alt="men-j.-shalwar-qamees"
+            />
+            <h4><span class="name">J. Shalwar Qamees</span></h4>
+            <h4>Rs. <span class="price"> 1999</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card men">
+            <img
+              src="../assets/img/stock/men/men-5.jpg"
+              alt="men-falcon-suit"
+            />
+            <h4><span class="name">Falcon Suit</span></h4>
+            <h4>Rs. <span class="price"> 1999</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card men">
+            <img
+              src="../assets/img/stock/men/men-6.jpg"
+              alt="men-premium-kurta"
+            />
+            <h4><span class="name">Wedding Premium Kurta</span></h4>
+            <h4>Rs. <span class="price"> 1349</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card men">
+            <img
+              src="../assets/img/stock/men/men-7.jpg"
+              alt="men-black-shalwar-qamees"
+            />
+            <h4><span class="name">Black Cotton Shalwar Qamees</span></h4>
+            <h4>Rs. <span class="price"> 1549</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card women">
+            <img
+              src="../assets/img/stock/women/women-1.jpg"
+              alt="regular-clothe"
+            />
+            <h4><span class="name">Plain Regular Clothe</span></h4>
+            <h4>Rs. <span class="price"> 1999</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card women">
+            <img
+              src="../assets/img/stock/women/women-2.jpg"
+              alt="long-sleeve"
+            />
+            <h4><span class="name">Dry Long Sleeve Suit</span></h4>
+            <h4>Rs. <span class="price"> 799</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card women">
+            <img src="../assets/img/stock/women/women-3.jpg" alt="net-sleeve" />
+            <h4><span class="name">Net Sleeve Dress</span></h4>
+            <h4>Rs. <span class="price"> 999</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card women">
+            <img
+              src="../assets/img/stock/women/women-4.jpg"
+              alt="party-dress"
+            />
+            <h4><span class="name">Party Dress</span></h4>
+            <h4>Rs. <span class="price"> 1499</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card women">
+            <img
+              src="../assets/img/stock/women/women-5.jpg"
+              alt="thermal-pure"
+            />
+            <h4><span class="name">Thermal Pure Suit</span></h4>
+            <h4>Rs. <span class="price"> 2449</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card women">
+            <img src="../assets/img/stock/women/women-6.jpg" alt="hijab-suit" />
+            <h4><span class="name">Hijab Outsider</span></h4>
+            <h4>Rs. <span class="price"> 1499</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card women">
+            <img
+              src="../assets/img/stock/women/women-7.jpg"
+              alt="fancy-cheap"
+            />
+            <h4><span class="name">Fancy Cheap Suit</span></h4>
+            <h4>Rs. <span class="price"> 1349</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card kids">
+            <img
+              src="../assets/img/stock/children/child-doraemon.jpg"
+              alt="doraemon-shirt"
+            />
+            <h4><span class="name">Doraemon Summer Shirt</span></h4>
+            <h4>Rs. <span class="price"> 499</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card kids">
+            <img
+              src="../assets/img/stock/children/child-keymon.jpg"
+              alt="keymon-shirt"
+            />
+            <h4><span class="name">Keymon T-shirt</span></h4>
+            <h4>Rs. <span class="price"> 399</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card kids">
+            <img
+              src="../assets/img/stock/children/child-minions.jpg"
+              alt="minions-shirt"
+            />
+            <h4><span class="name">Cool Minions Shirt</span></h4>
+            <h4>Rs. <span class="price"> 849</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card kids">
+            <img
+              src="../assets/img/stock/children/child-pent-shirt.jpg"
+              alt="newborn-pent-shirt"
+            />
+            <h4><span class="name">New Born Pent Shirt</span></h4>
+            <h4>Rs. <span class="price"> 449</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card kids">
+            <img
+              src="../assets/img/stock/children/child-shalwar-kameez.jpg"
+              alt="girl-dress"
+            />
+            <h4><span class="name">Girls Dress</span></h4>
+            <h4>Rs. <span class="price"> 599</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+          <div class="card kids">
+            <img
+              src="../assets/img/stock/children/child-spiderman.jpg"
+              alt="spiderman-shirt"
+            />
+            <h4><span class="name">Spider Suit G(old)</span></h4>
+            <h4>Rs. <span class="price"> 549</span>/-</h4>
+            <div class="options">
+              <div class="add-to-cart">
+                +
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="shop-footer">
+        <div>
+          <h4><a href="about.html">About Us</a></h4>
+          <h4><a href="shop.html">Shop</a></h4>
+        </div>
+        <div>
+          <h3>Follow Up</h3>
+          <a href="#">
+            <img
+              src="../assets/vector/facebook.svg"
+              alt="facebook"
+              class="social-icon"
+            />
+            <img
+              src="../assets/vector/twitter.svg"
+              alt="twitter"
+              class="social-icon"
+            />
+            <img
+              src="../assets/vector/whatsapp.svg"
+              alt="whatsapp"
+              class="social-icon"
+            />
+            <img
+              src="../assets/vector/instagram.svg"
+              alt="instagram"
+              class="social-icon"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JS -->
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/filter.js"></script>
+  </body>
+</html>

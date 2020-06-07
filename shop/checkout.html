@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Confirmation | Clothy</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/vector/t-shirt-black.svg"
+      type="image/x-icon"
+    />
+
+    <!-- PRELOADER TERMINATOR -->
+    <script src="../assets/js/app.js" defer></script>
+  </head>
+  <body class="inactive">
+    <div class="container">
+      <!-- <section class="preloader">
+        <div class="loader"></div>
+        <h3>Wait While We Send The Data To Our Servers</h3>
+      </section> -->
+
+      <nav class="shop-nav">
+        <a href="../index.html">
+          <img
+            src="../assets/vector/t-shirt-black.svg"
+            class="logo"
+            alt="logo"
+          />
+        </a>
+        <a href="shop.html">
+          <img src="../assets/vector/shop-black.svg" alt="shop" class="logo" />
+        </a>
+      </nav>
+      <main class="checkout">
+        <h3>
+          Don't Worry About The Payment At This Stage, Our Products Are Cash On
+          Delivery
+        </h3>
+        <h4>Just Confirm Your Checkout</h4>
+        <form action="done.html" method="GET">
+          <label for="address"
+            >Address:
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Your Postal Address Here"
+              autofocus
+              required
+            />
+          </label>
+          <label for="zip">
+            Zip Code:
+            <input
+              type="number"
+              name="zip"
+              id="zip"
+              placeholder="Your Zip Code Here"
+              autofocus
+              required
+            />
+          </label>
+          <div class="btn-container">
+            <a href="shop.html" class="btn-red-outline">I Got Distracted</a>
+            <button class="btn-green-outline">Confirm Checkout</button>
+          </div>
+        </form>
+      </main>
+      <footer class="shop-footer">
+        <div>
+          <h4><a href="about.html">About Us</a></h4>
+          <h4><a href="shop.html">Shop</a></h4>
+        </div>
+        <div>
+          <h3>Follow Up</h3>
+          <a href="#">
+            <img
+              src="../assets/vector/facebook.svg"
+              alt="facebook"
+              class="social-icon"
+            />
+            <img
+              src="../assets/vector/twitter.svg"
+              alt="twitter"
+              class="social-icon"
+            />
+            <img
+              src="../assets/vector/whatsapp.svg"
+              alt="whatsapp"
+              class="social-icon"
+            />
+            <img
+              src="../assets/vector/instagram.svg"
+              alt="instagram"
+              class="social-icon"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
